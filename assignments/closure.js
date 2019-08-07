@@ -1,9 +1,12 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-let simple = (val, cb) => {
-  return cb(val);
-}
-console.log(simple(2, (val) => val * 2));
+const multByFive = (num) => {
+  return () =>  {
+     return 5 * num;
+  }
+};
+let multiplied = multByFive(4);
+console.log(multiplied());
 
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
